@@ -1,0 +1,54 @@
+{
+  "name": "glow-log",
+  "version": "0.1.0",
+  "description": "Drop-in replacement for console.log with colorized, structured terminal output. Zero dependencies.",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node -e \"require('fs').writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}')\"",
+    "test": "tsc -p tsconfig.json --noEmit && node --import tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "logger",
+    "pretty",
+    "colors",
+    "ansi",
+    "terminal",
+    "cli",
+    "debug",
+    "inspect",
+    "zero-dependency",
+    "typescript"
+  ],
+  "author": "Devguru-J",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devguru-J/glow-log.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.19",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
