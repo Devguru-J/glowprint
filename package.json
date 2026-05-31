@@ -42,9 +42,13 @@
   ],
   "author": "Devguru-J",
   "license": "MIT",
+  "homepage": "https://github.com/Devguru-J/-glow-log#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Devguru-J/glow-log.git"
+    "url": "git+https://github.com/Devguru-J/-glow-log.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Devguru-J/-glow-log/issues"
   },
   "devDependencies": {
     "@types/node": "^22.19.19",

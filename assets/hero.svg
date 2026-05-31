@@ -1,0 +1,37 @@
+<svg width="890" height="264" viewBox="0 0 890 264" xmlns="http://www.w3.org/2000/svg" font-family="'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14.5">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="890" height="264" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="889" height="263" rx="14" fill="none" stroke="#30363d"/>
+
+  <!-- header -->
+  <circle cx="24" cy="20" r="6" fill="#ff5f56"/> <circle cx="44" cy="20" r="6" fill="#ffbd2e"/> <circle cx="64" cy="20" r="6" fill="#27c93f"/>
+  <text x="445" y="25" fill="#6e7681" text-anchor="middle" font-size="13">node app.js</text>
+  <line x1="0" y1="40" x2="890" y2="40" stroke="#30363d"/>
+
+  <!-- column labels -->
+  <text x="22" y="66" fill="#6e7681" font-size="12.5">console.log()  —  before</text>
+  <text x="452" y="66" fill="#7ee787" font-size="12.5">glow-log  —  after ✦</text>
+  <line x1="445" y1="40" x2="445" y2="264" stroke="#30363d" stroke-dasharray="3 4"/>
+
+  <text x="22" y="88" fill="#c9d1d9" xml:space="preserve">{</text>
+<text x="22" y="110" fill="#c9d1d9" xml:space="preserve">  user: 'kim',</text>
+<text x="22" y="132" fill="#c9d1d9" xml:space="preserve">  age: 30,</text>
+<text x="22" y="154" fill="#c9d1d9" xml:space="preserve">  active: true,</text>
+<text x="22" y="176" fill="#c9d1d9" xml:space="preserve">  roles: [ 'admin', 'dev' ],</text>
+<text x="22" y="198" fill="#c9d1d9" xml:space="preserve">  meta: null</text>
+<text x="22" y="220" fill="#c9d1d9" xml:space="preserve">}</text>
+
+  <text x="452" y="88" xml:space="preserve"><tspan fill="#8b949e">{</tspan></text>
+<text x="452" y="110" xml:space="preserve"><tspan fill="#c9d1d9">  </tspan><tspan fill="#56d4dd">user</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#c9d1d9">   </tspan><tspan fill="#7ee787">"kim"</tspan></text>
+<text x="452" y="132" xml:space="preserve"><tspan fill="#c9d1d9">  </tspan><tspan fill="#56d4dd">age</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#c9d1d9">    </tspan><tspan fill="#f2cc60">30</tspan></text>
+<text x="452" y="154" xml:space="preserve"><tspan fill="#c9d1d9">  </tspan><tspan fill="#56d4dd">active</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#d2a8ff">true</tspan></text>
+<text x="452" y="176" xml:space="preserve"><tspan fill="#c9d1d9">  </tspan><tspan fill="#56d4dd">roles</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#8b949e">[ </tspan><tspan fill="#7ee787">"admin"</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#7ee787">"dev"</tspan><tspan fill="#8b949e"> ]</tspan></text>
+<text x="452" y="198" xml:space="preserve"><tspan fill="#c9d1d9">  </tspan><tspan fill="#56d4dd">meta</tspan><tspan fill="#8b949e">:</tspan><tspan fill="#c9d1d9">   </tspan><tspan fill="#8b949e">null</tspan></text>
+<text x="452" y="220" xml:space="preserve"><tspan fill="#8b949e">}</tspan></text>
+
+</svg>
