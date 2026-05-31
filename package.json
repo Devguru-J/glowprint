@@ -38,7 +38,14 @@
     "debug",
     "inspect",
     "zero-dependency",
-    "typescript"
+    "typescript",
+    "esm",
+    "cjs",
+    "node",
+    "bun",
+    "deno",
+    "pnpm",
+    "yarn"
   ],
   "author": "Devguru-J",
   "license": "MIT",

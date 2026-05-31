@@ -35,11 +35,22 @@ You `console.log(someObject)` a hundred times a day, and every time you squint a
 
 ## Install
 
+Works with every major package manager and runtime — **npm · yarn · pnpm · bun · deno**.
+
 ```bash
-npm install glow-log
+npm install glow-log     # npm
+yarn add glow-log        # yarn
+pnpm add glow-log        # pnpm
+bun add glow-log         # bun
 ```
 
-> Works with **ESM** and **CommonJS**, ships TypeScript types, Node 18+.
+**Deno** — no install step, import straight from npm:
+
+```ts
+import { log } from 'npm:glow-log'
+```
+
+> Ships **ESM + CommonJS** builds and TypeScript types. Node 18+, Bun, and Deno supported.
 
 ## Usage
 
@@ -52,6 +63,8 @@ warn('low disk')                                        // ⚠  yellow
 success('Deployed!')                                    // ✓  green
 error(new Error('Connection refused'))                  // red box + stack trace
 ```
+
+> **Deno:** use the `npm:` specifier in imports, e.g. `import { log, error } from 'npm:glow-log'`.
 
 ### Custom logger
 
