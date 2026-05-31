@@ -1,5 +1,5 @@
 {
-  "name": "glow-log",
+  "name": "glowprint",
   "version": "0.1.0",
   "description": "Drop-in replacement for console.log with colorized, structured terminal output. Zero dependencies.",
   "type": "module",
@@ -49,13 +49,13 @@
   ],
   "author": "Devguru-J",
   "license": "MIT",
-  "homepage": "https://github.com/Devguru-J/-glow-log#readme",
+  "homepage": "https://github.com/Devguru-J/glowprint#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Devguru-J/-glow-log.git"
+    "url": "git+https://github.com/Devguru-J/glowprint.git"
   },
   "bugs": {
-    "url": "https://github.com/Devguru-J/-glow-log/issues"
+    "url": "https://github.com/Devguru-J/glowprint/issues"
   },
   "devDependencies": {
     "@types/node": "^22.19.19",

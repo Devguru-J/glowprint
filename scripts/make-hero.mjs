@@ -38,7 +38,7 @@ function parseAnsi(line) {
   return runs
 }
 
-// Capture glow-log output for a value.
+// Capture glowprint output for a value.
 function glow(value) {
   const logger = createLogger({ forceColor: true })
   let buf = ''
@@ -112,7 +112,7 @@ const svg = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http
 
   <!-- column labels -->
   <text x="${PAD}" y="${HEADER_H + 26}" fill="#6e7681" font-size="12.5">console.log()  —  before</text>
-  <text x="${colW + 30 + PAD - 30}" y="${HEADER_H + 26}" fill="#7ee787" font-size="12.5">glow-log  —  after ✦</text>
+  <text x="${colW + 30 + PAD - 30}" y="${HEADER_H + 26}" fill="#7ee787" font-size="12.5">glowprint  —  after ✦</text>
   <line x1="${colW + 15}" y1="${HEADER_H}" x2="${colW + 15}" y2="${H}" stroke="#30363d" stroke-dasharray="3 4"/>
 
   ${renderBlock(beforeLines, PAD, bodyTop, false)}

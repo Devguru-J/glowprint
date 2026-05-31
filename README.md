@@ -1,18 +1,18 @@
 <div align="center">
 
-# ✦ glow-log
+# ✦ glowprint
 
 ### Make `console.log` beautiful. One import. Zero dependencies.
 
-[![npm version](https://img.shields.io/npm/v/glow-log?color=7ee787&label=npm&logo=npm)](https://www.npmjs.com/package/glow-log)
-[![npm downloads](https://img.shields.io/npm/dm/glow-log?color=79c0ff&logo=npm)](https://www.npmjs.com/package/glow-log)
-[![zero dependencies](https://img.shields.io/badge/dependencies-0-7ee787)](https://github.com/Devguru-J/-glow-log/blob/master/package.json)
-[![types](https://img.shields.io/npm/types/glow-log?color=d2a8ff&logo=typescript)](https://github.com/Devguru-J/-glow-log)
-[![license](https://img.shields.io/npm/l/glow-log?color=f2cc60)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/glowprint?color=7ee787&label=npm&logo=npm)](https://www.npmjs.com/package/glowprint)
+[![npm downloads](https://img.shields.io/npm/dm/glowprint?color=79c0ff&logo=npm)](https://www.npmjs.com/package/glowprint)
+[![zero dependencies](https://img.shields.io/badge/dependencies-0-7ee787)](https://github.com/Devguru-J/glowprint/blob/master/package.json)
+[![types](https://img.shields.io/npm/types/glowprint?color=d2a8ff&logo=typescript)](https://github.com/Devguru-J/glowprint)
+[![license](https://img.shields.io/npm/l/glowprint?color=f2cc60)](./LICENSE)
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/Devguru-J/-glow-log/master/assets/hero.png" alt="console.log vs glow-log — before and after" width="820"/>
+<img src="https://raw.githubusercontent.com/Devguru-J/glowprint/master/assets/hero.png" alt="console.log vs glowprint — before and after" width="820"/>
 
 <br/>
 
@@ -25,11 +25,11 @@ No config. No dependencies. Safe in CI.
 
 ## Why
 
-You `console.log(someObject)` a hundred times a day, and every time you squint at a flat, colorless blob. `glow-log` fixes that with a one-line import swap — aligned keys, syntax-highlighted values, boxed errors with stack traces. It ships **zero runtime dependencies** and it **never crashes your app**: if rendering ever fails, it silently falls back to the native `console.log`.
+You `console.log(someObject)` a hundred times a day, and every time you squint at a flat, colorless blob. `glowprint` fixes that with a one-line import swap — aligned keys, syntax-highlighted values, boxed errors with stack traces. It ships **zero runtime dependencies** and it **never crashes your app**: if rendering ever fails, it silently falls back to the native `console.log`.
 
 ```diff
 - console.log({ user: 'kim', age: 30, roles: ['admin', 'dev'] })
-+ import { log } from 'glow-log'
++ import { log } from 'glowprint'
 + log({ user: 'kim', age: 30, roles: ['admin', 'dev'] })
 ```
 
@@ -38,16 +38,16 @@ You `console.log(someObject)` a hundred times a day, and every time you squint a
 Works with every major package manager and runtime — **npm · yarn · pnpm · bun · deno**.
 
 ```bash
-npm install glow-log     # npm
-yarn add glow-log        # yarn
-pnpm add glow-log        # pnpm
-bun add glow-log         # bun
+npm install glowprint     # npm
+yarn add glowprint        # yarn
+pnpm add glowprint        # pnpm
+bun add glowprint         # bun
 ```
 
 **Deno** — no install step, import straight from npm:
 
 ```ts
-import { log } from 'npm:glow-log'
+import { log } from 'npm:glowprint'
 ```
 
 > Ships **ESM + CommonJS** builds and TypeScript types. Node 18+, Bun, and Deno supported.
@@ -55,7 +55,7 @@ import { log } from 'npm:glow-log'
 ## Usage
 
 ```ts
-import { log, info, warn, error, success } from 'glow-log'
+import { log, info, warn, error, success } from 'glowprint'
 
 log({ user: 'kim', age: 30, roles: ['admin', 'dev'] }) // colorized, aligned tree
 info('starting…')                                       // ℹ  blue
@@ -64,12 +64,12 @@ success('Deployed!')                                    // ✓  green
 error(new Error('Connection refused'))                  // red box + stack trace
 ```
 
-> **Deno:** use the `npm:` specifier in imports, e.g. `import { log, error } from 'npm:glow-log'`.
+> **Deno:** use the `npm:` specifier in imports, e.g. `import { log, error } from 'npm:glowprint'`.
 
 ### Custom logger
 
 ```ts
-import { createLogger } from 'glow-log'
+import { createLogger } from 'glowprint'
 
 const logger = createLogger({
   theme: 'dracula',   // 'default' | 'dracula' | 'mono' | custom color map
@@ -123,4 +123,4 @@ logger.log(payload)
 
 MIT © [Devguru-J](https://github.com/Devguru-J)
 
-<div align="center"><sub>If glow-log made your terminal nicer, a ⭐ helps a lot.</sub></div>
+<div align="center"><sub>If glowprint made your terminal nicer, a ⭐ helps a lot.</sub></div>
