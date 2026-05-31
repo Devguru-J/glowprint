@@ -63,6 +63,24 @@ test('Error becomes an error node with message and stack lines', () => {
   assert.ok(Array.isArray(tree.stack))
 })
 
+test('Error whose stack does not lead with the message keeps all frames', () => {
+  const fake = {
+    name: 'Error',
+    message: 'boom',
+    stack: 'at frameOne (a.js:1:1)\nat frameTwo (b.js:2:2)',
+  }
+  Object.setPrototypeOf(fake, Error.prototype)
+  const tree = inspect(fake) as { kind: 'error'; message: string; stack: string[] }
+  assert.equal(tree.kind, 'error')
+  assert.equal(tree.stack.length, 2)
+  assert.equal(tree.stack[0], 'at frameOne (a.js:1:1)')
+  assert.equal(tree.stack[1], 'at frameTwo (b.js:2:2)')
+})
+
+test('bigint renders with an n suffix', () => {
+  assert.deepEqual(inspect(10n), { kind: 'number', text: '10n' })
+})
+
 test('Date becomes a date token', () => {
   const d = new Date('2020-01-02T03:04:05.000Z')
   assert.deepEqual(inspect(d), { kind: 'date', text: d.toISOString() })

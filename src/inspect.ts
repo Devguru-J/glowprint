@@ -20,7 +20,8 @@ export function inspect(
 
   const t = typeof value
   if (t === 'string') return { kind: 'string', text: `"${value as string}"` }
-  if (t === 'number' || t === 'bigint') return { kind: 'number', text: String(value) }
+  if (t === 'number') return { kind: 'number', text: String(value) }
+  if (t === 'bigint') return { kind: 'number', text: `${String(value)}n` }
   if (t === 'boolean') return { kind: 'boolean', text: String(value) }
   if (t === 'function') return { kind: 'special', text: `[Function: ${(value as Function).name || 'anonymous'}]` }
   if (t === 'symbol') return { kind: 'special', text: String(value) }
@@ -28,7 +29,15 @@ export function inspect(
   if (value instanceof Date) return { kind: 'date', text: value.toISOString() }
 
   if (value instanceof Error) {
-    const stack = (value.stack ?? '').split('\n').slice(1).map((l) => l.trim())
+    const lines = (value.stack ?? '').split('\n')
+    const first = (lines[0] ?? '').trim()
+    const leadsWithHeader =
+      first === `${value.name}: ${value.message}` ||
+      first.startsWith(`${value.name}: ${value.message}`) ||
+      first === value.message ||
+      first.startsWith(value.message)
+    const frameLines = leadsWithHeader ? lines.slice(1) : lines
+    const stack = frameLines.map((l) => l.trim())
     return { kind: 'error', message: value.message, stack }
   }
 

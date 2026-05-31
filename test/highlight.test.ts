@@ -28,6 +28,11 @@ test('empty array renders []', () => {
   assert.equal(highlight(inspect([]), plain), '[]')
 })
 
+test('array of objects renders multiline indented (plain)', () => {
+  const out = highlight(inspect([{ a: 1 }, { bb: 2 }]), plain)
+  assert.equal(out, '[\n  {\n    a: 1\n  },\n  {\n    bb: 2\n  }\n]')
+})
+
 test('object renders multiline with aligned keys (plain)', () => {
   const out = highlight(inspect({ a: 1, bb: 2 }), plain)
   assert.equal(out, '{\n  a:  1\n  bb: 2\n}')

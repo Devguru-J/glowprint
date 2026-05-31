@@ -19,7 +19,22 @@ export function highlight(token: Token, opts: HighlightOptions, level = 0): stri
 
     case 'array': {
       if (token.items.length === 0) return color('[]', theme.punctuation)
-      const inner = token.items.map((it) => highlight(it, opts, level + 1)).join(color(', ', theme.punctuation))
+      const rendered = token.items.map((it) => highlight(it, opts, level + 1))
+      const multiline = rendered.some((r) => r.includes('\n'))
+      if (multiline) {
+        const indent = '  '.repeat(level + 1)
+        const closeIndent = '  '.repeat(level)
+        const lines = rendered.map((r) => indent + r)
+        return (
+          color('[', theme.punctuation) +
+          '\n' +
+          lines.join(color(',', theme.punctuation) + '\n') +
+          '\n' +
+          closeIndent +
+          color(']', theme.punctuation)
+        )
+      }
+      const inner = rendered.join(color(', ', theme.punctuation))
       return color('[ ', theme.punctuation) + inner + color(' ]', theme.punctuation)
     }
 
