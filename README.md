@@ -66,6 +66,10 @@ error(new Error('Connection refused'))                  // red box + stack trace
 
 > **Deno:** use the `npm:` specifier in imports, e.g. `import { log, error } from 'npm:glowprint'`.
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/Devguru-J/glowprint/master/assets/demo.gif" alt="glowprint demo — colorized logs, success check, boxed error" width="640"/>
+</div>
+
 ### Custom logger
 
 ```ts
