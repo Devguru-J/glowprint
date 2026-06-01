@@ -1,6 +1,6 @@
 {
   "name": "glowprint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Drop-in replacement for console.log with colorized, structured terminal output. Zero dependencies.",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -16,7 +16,8 @@
         "types": "./dist/cjs/index.d.ts",
         "default": "./dist/cjs/index.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
